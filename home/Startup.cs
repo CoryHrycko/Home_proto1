@@ -22,10 +22,12 @@ namespace Home
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            // In production, the React files will be served from this directory
+            /**  In production, the React files will be served from this directory 
+             * This is highly important point that this will be the entry point.
+            */
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = "ClientApp/build";
+                configuration.RootPath = "ClientApp/build"; 
             });
         }
 
